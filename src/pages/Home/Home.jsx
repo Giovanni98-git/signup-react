@@ -15,7 +15,7 @@ export default function Home(props) {
   }, [isAuthenticated, navigate]);
 
   return (
-    <div className="max-h-max w-full bg-[#84C7AE] flex flex-col gap-4 pb-8">
+    <div className="min-h-[100vh] w-full bg-[#84C7AE] flex flex-col gap-4 pb-8">
       <Header
         username={username}
         avatar={avatar}

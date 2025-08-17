@@ -18,7 +18,7 @@ export default function ProductDetails(props) {
   const { id } = useParams();
   const product = productsList.products.find((p) => p.id === parseInt(id));
   return (
-    <div className="max-h-max w-full bg-[#84C7AE] flex flex-col gap-4 pb-8">
+    <div className="min-h-[100vh] w-full bg-[#84C7AE] flex flex-col gap-4 pb-8">
       <Header
         username={username}
         avatar={avatar}
