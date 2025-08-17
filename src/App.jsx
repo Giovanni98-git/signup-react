@@ -2,8 +2,8 @@ import Login from "./pages/Login/Login";
 import avatar from "./assets/img.jpg";
 import Home from "./pages/Home/Home";
 import { Routes, Route } from "react-router-dom";
-
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import ProductDetails from "./pages/ProductDetails/ProductDetails";
 
 function App() {
   const USER = {
@@ -38,9 +38,7 @@ function App() {
         <Route
           path="/products/:id"
           element={
-            <div className="h-screen w-full bg-[#84C7AE] flex justify-center items-center">
-              <h1 className="text-2xl font-bold text-white">Product Details</h1>
-            </div>
+            <ProductDetails username={USER.username} setIsAuthenticated={setIsAuthenticated} avatar={USER.avatar} isAuthenticated={isAuthenticated}/>
           } />
       </Routes>
     </>

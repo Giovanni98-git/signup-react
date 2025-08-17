@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import productsList from "../assets/productsData.json";
 import ProductCard from "./Cards";
 
@@ -48,7 +47,7 @@ export default function Products() {
   }, [products, searchTerm, selectedAvailability, selectedCategory]);
 
   return (
-    <div className="flex flex-col items-center h-full w-full gap-6 ">
+    <div className="flex flex-col items-center h-full w-full gap-6">
       <div className=" w-[98%] sm:w-[94%] md:w-[90%] flex gap-4 justify-center items-center bg-[#F0F0F0] rounded-2xl shadow-lg">
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center p-4 sm:p-6 w-11/12 ">
           <input
@@ -96,7 +95,7 @@ export default function Products() {
       <div className=" w-[98%] sm:w-[94%] md:w-[90%] flex gap-4 justify-center bg-[#F0F0F0] items-center rounded-2xl shadow-lg">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 sm:p-6 w-full">
           {filterProducts.map((product) => (
-            <ProductCard key={product.id} product={product}/>
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </div>
